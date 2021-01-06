@@ -12,7 +12,6 @@ class TugasController extends Controller{
         //$tugas = DB::table('tugas')->get();
 
         return view('indtugas',['tugas' => $tugas]);
-
     }
 
     public function edit($id){
