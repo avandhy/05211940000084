@@ -13,6 +13,7 @@
 
 //use Illuminate\Routing\Route;
 
+use App\Http\Controllers\PegawaiController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,7 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/cari','PegawaiController@cari');
+Route::any('/pegawai/read/{id}', 'PegawaiController@read');
 
 Route::get('/tugas', 'TugasController@indtugas');
 Route::get('/tugas/edit/{id}', 'TugasController@edit');

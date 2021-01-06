@@ -22,7 +22,7 @@ class TugasController extends Controller{
     }
 
     public function update(Request $request){
-		DB::table('tugas')->where('tugas_id',$request->id)->update([
+		DB::table('tugas')->where('ID',$request->id)->update([
 			'IDPegawai' => $request->pegawai,
 			'Tanggal' => $request->waktu,
 			'NamaTugas' => $request->tugas,

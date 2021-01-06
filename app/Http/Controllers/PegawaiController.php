@@ -87,5 +87,15 @@ class PegawaiController extends Controller
     		// mengirim data pegawai ke view index
 		return view('pegawai/index',['pegawai' => $pegawai]);
 
+    }
+
+    public function read($id){
+        // mengambil data pegawai berdasarkan id yang dipilih
+        $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+        $tugas = DB::table('tugas')->get() ;
+
+        // passing data pegawai yang didapat ke view edit.blade.php
+	    return view('pegawai/read',['pegawai' => $pegawai,'tugas' => $tugas]);
+
 	}
 }

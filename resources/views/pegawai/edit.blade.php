@@ -40,8 +40,8 @@
             <input type="number" class="form-control" required="required" name="umur" id="umur" value="{{ $p->pegawai_umur }}">
         </div>
         <div class="form-group">
-            <label for="email">Alamat:</label>
-            <textarea class="form-control" required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea>
+            <label for="alamat">Alamat:</label>
+            <textarea class="form-control" required="required" id="alamat"name="alamat">{{ $p->pegawai_alamat }}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">Simpan Data</button>
     </div>
