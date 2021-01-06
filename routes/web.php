@@ -47,3 +47,12 @@ Route::get('/tugas/cari', 'TugasController@cari');
 Route::post('/tugas/store', 'TugasController@store');
 Route::get('/tugas/cari', 'TugasController@cari');
 Route::get('/tugas/hapus/{id}', 'TugasController@hapus');
+
+Route::get('/sandal', 'SandalController@index');
+Route::get('/sandal/edit/{id}', '');
+Route::post('/sandal/update', 'TugasController@update');
+Route::get('/sandal/tambah', 'TugasController@tambah');
+Route::get('/sandal/cari', 'TugasController@cari');
+Route::post('/sandal/store', 'TugasController@store');
+Route::get('/sandal/cari', 'TugasController@cari');
+Route::get('/sandal/hapus/{id}', 'TugasController@hapus');
