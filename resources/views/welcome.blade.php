@@ -89,11 +89,9 @@
                 <div class="links">
 		            <a href="/coba">Halo</a>
                     <a href="/pegawai">Pegawai</a>
-                    <a href="{{ route('welcome') }}">Welcome</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/tugas">Tugas</a>
+                    <a href="/sandal">Sandal</a>
+
                 </div>
             </div>
         </div>

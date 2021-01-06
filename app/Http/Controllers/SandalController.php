@@ -5,16 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class TugasController extends Controller{
+class SandalController extends Controller{
 
     public function index(){
-        $tugas = DB::table('sandal')->get();
+        $sandal = DB::table('sandal')->get();
 
         return view('sandal/index',['sandal' => $sandal]);
     }
 
     public function edit($id){
         $sandal = DB::table('sandal')->where('kodesandal',$id)->get();
+
 
 		return view('sandal/edit',['sandal' => $sandal]);
     }
@@ -36,7 +37,7 @@ class TugasController extends Controller{
 
     public function store(Request $request){
         DB::table('sandal')->insert([
-			'merksandal' => $request->merek,
+            'merksandal' => $request->merek,
 			'stocksandal' => $request->stok,
 			'tersedia' => $request->tersedia
 		]);
@@ -47,8 +48,8 @@ class TugasController extends Controller{
     public function cari(Request $request){
         $cari = $request->cari;
 
-		$tugas = DB::table('sandal')
-		->where('mereksandal','like',"%".$cari."%")
+		$sandal= DB::table('sandal')
+		->where('merksandal','like',"%".$cari."%")
         ->paginate();
 
 		return view('sandal/index',['sandal' => $sandal]);
