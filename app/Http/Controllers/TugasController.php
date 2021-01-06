@@ -11,14 +11,14 @@ class TugasController extends Controller{
         $tugas = DB::table('tugas')->paginate(5);
         //$tugas = DB::table('tugas')->get();
 
-        return view('indtugas',['tugas' => $tugas]);
+        return view('tugas/index',['tugas' => $tugas]);
     }
 
     public function edit($id){
         $tugas = DB::table('tugas')->where('ID',$id)->get();
         $pegawai = DB::table('pegawai')->get();
 
-		return view('edittugas',['tugas' => $tugas,'pegawai'=> $pegawai]);
+		return view('tugas/edit',['tugas' => $tugas,'pegawai'=> $pegawai]);
     }
 
     public function update(Request $request){
@@ -35,7 +35,7 @@ class TugasController extends Controller{
     public function tambah(){
         $pegawai = DB::table('pegawai')->get();
 
-        return view('tambahtugas',['pegawai'=> $pegawai]);
+        return view('tugas/tambah',['pegawai'=> $pegawai]);
     }
 
     public function store(Request $request){
@@ -56,7 +56,7 @@ class TugasController extends Controller{
 		->where('NamaTugas','like',"%".$cari."%")
         ->paginate();
 
-		return view('indtugas',['tugas' => $tugas]);
+		return view('tugas/index',['tugas' => $tugas]);
     }
 
     public function hapus($id){
