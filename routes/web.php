@@ -48,9 +48,14 @@ Route::post('/tugas/store', 'TugasController@store');
 Route::get('/tugas/hapus/{id}', 'TugasController@hapus');
 
 Route::get('/sandal', 'SandalController@index');
-Route::any('/sandal/edit/{id}', 'SandalController@edit');
+Route::get('/sandal/edit/{id}', 'SandalController@edit');
 Route::post('/sandal/update', 'SandalController@update');
 Route::get('/sandal/tambah', 'SandalController@tambah');
 Route::get('/sandal/cari', 'SandalController@cari');
 Route::post('/sandal/store', 'SandalController@store');
 Route::get('/sandal/hapus/{id}', 'SandalController@hapus');
+
+Route::get('/mahasiswa', "MahasiswaController@index");
+Route::get('/mahasiswa/edit/{nrp}', 'MahasiswaController@edit');
+Route::post('/mahasiswa/update', 'MahasiswaController@update');
+
