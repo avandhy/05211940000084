@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
             <label for="IPK">IPK :</label>
-            <input type="text" class="form-control" rname="IPK" id="IPK" value="{{ $m->IPK }}">
+            <input type="text" class="form-control" name="IPK" id="IPK" value="{{ $m->IPK }}">
         </div>
         <button type="submit" class="btn btn-primary">Simpan Data</button>
     </div>
