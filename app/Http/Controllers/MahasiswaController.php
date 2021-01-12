@@ -20,7 +20,7 @@ class MahasiswaController extends Controller{
     }
 
     public function update(Request $request){
-		DB::table('mahasiswa')->where('NRP',$request->nrp)->update([
+		DB::table('mahasiswa')->where('NRP',$request->NRP)->update([
 			'NRP' => $request->NRP,
 			'Nama' => $request->Nama,
             'Jurusan' => $request->Jurusan,

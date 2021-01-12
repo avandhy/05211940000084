@@ -32,7 +32,7 @@
         </div>
         <div class="form-group">
             <label for="Jurusan ">Departemen :</label>
-            <input type="text" class="form-control" required="required" name="Jurusan " id="Jurusan " value="{{ $m->Jurusan }}">
+            <input type="text" class="form-control" required="required" name="Jurusan" id="Jurusan " value="{{ $m->Jurusan }}">
         </div>
         <div class="form-group">
             <label for="IPK">IPK :</label>
