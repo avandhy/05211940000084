@@ -21,7 +21,7 @@
 
 @section('content')
 
-    <h2>Data Mahasiswa</h2>
+    <h2 style="margin: 3rem 0 0 0">Data Mahasiswa</h2>
 
     <table class="table table-hover" style="margin: 5rem 0">
         <tr>
@@ -29,7 +29,7 @@
             <th>Nama</th>
             <th>Jurusan</th>
             <th>IPK</th>
-            
+            <th>Opsi</th>
         </tr>
         @foreach($mahasiswa as $m)
         <tr>
@@ -44,6 +44,6 @@
         </tr>
         @endforeach
     </table>
-
+    {{ $mahasiswa->links() }}
 @endsection
 

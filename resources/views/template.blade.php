@@ -42,6 +42,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/sandal">Sandal</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
+              </li>
             </ul>
           </div>
         </div>

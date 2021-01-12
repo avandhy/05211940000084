@@ -37,7 +37,7 @@ Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/cari','PegawaiController@cari');
-Route::any('/pegawai/read/{id}', 'PegawaiController@read');
+Route::get('/pegawai/read/{id}', 'PegawaiController@read');
 
 Route::get('/tugas', 'TugasController@indtugas');
 Route::get('/tugas/edit/{id}', 'TugasController@edit');
@@ -58,4 +58,5 @@ Route::get('/sandal/hapus/{id}', 'SandalController@hapus');
 Route::get('/mahasiswa', "MahasiswaController@index");
 Route::get('/mahasiswa/edit/{nrp}', 'MahasiswaController@edit');
 Route::post('/mahasiswa/update', 'MahasiswaController@update');
+Route::get('/mahasiswa/read/{nrp}', 'MahasiswaController@read');
 

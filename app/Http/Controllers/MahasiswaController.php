@@ -8,14 +8,13 @@ use Illuminate\Support\Facades\DB;
 class MahasiswaController extends Controller{
 
     public function index(){
-        $mahasiswa = DB::table('mahasiswa')->get();
+        $mahasiswa = DB::table('mahasiswa')->paginate(20);
 
         return view('mahasiswa(UAS)/index',['mahasiswa' => $mahasiswa]);
     }
 
     public function edit($nrp){
         $mahasiswa = DB::table('mahasiswa')->where('NRP',$nrp)->get();
-
 
 		return view('mahasiswa(UAS)/edit',['mahasiswa' => $mahasiswa]);
     }
@@ -34,7 +33,7 @@ class MahasiswaController extends Controller{
 
         $mahasiswa = DB::table('mahasiswa')->where('NRP',$nrp)->get();
 
-	    return view('mahasiswa/read',['mahasiswa' => $mahasiswa]);
+	    return view('mahasiswa(UAS)/read',['mahasiswa' => $mahasiswa]);
 
 	}
 
